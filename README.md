@@ -105,7 +105,7 @@ A user-friendly Streamlit application was developed to demonstrate the utility o
 This project successfully demonstrates the application of NLP techniques for sentiment analysis on social media data. By meticulously cleaning and preprocessing the tweet dataset, and then training and evaluating various classification models, we can effectively gauge public opinion towards Apple and Google products. The chosen models provide valuable insights into consumer sentiment, which can be leveraged for strategic business decisions.
 
 ## Recommendations
-**Focus on Negative Sentiment Analysis:** Given the lower count of negative tweets, consider oversampling negative instances or using weighted loss functions during model training to improve the detection of critical feedback.
+**Larger Training Dataset:** Incorporate a larger and more diverse dataset to reduce potential overfitting, optimize real-world robustness, and enhance generalizability with noisy social media text data.
 
 **Product-Specific Sentiment:** Further analysis could delve into sentiment towards specific products (e.g., "iPhone 15" vs. "Google Pixel 8") rather than just the company, providing more granular insights.
 
