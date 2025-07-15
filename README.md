@@ -14,6 +14,8 @@ The primary client for this NLP project is Apple. By analyzing sentiments from t
 ## Project Objectives:
 ### Objective 1: Sentiment Distribuction by Company 
 EDA revealed the distribution of sentiments across Apple and Google products. After cleaning and categorizing products, the sentiment distribution showed that a significant portion of tweets were neutral, followed by positive, and then negative sentiments. This highlights the importance of distinguishing between no emotion and actual positive/negative feedback.
+<img width="2113" height="1407" alt="sentiment-distribuction-per-product" src="https://github.com/user-attachments/assets/a4ea7e46-3c0f-4a69-b605-bff7f0ada51a" />
+
 
 ### Objective 2: Logistic Regression Model for Predicting Company 
 A Logistic Regression model was build and tuned to classify tweets as pertaining to either Apple or Google products. The model serves as a preliminary classification step before sentiment prediction by predicting which company's products is an emotion sentiments in a tweet directed at.
@@ -82,19 +84,17 @@ The performance of each sentiment model was rigorously evaluated based on: Accur
 
 **Tuned Models' Performance on Test Set**
 
+
 | Model              | Test Accuracy | Test Precision | Test Recall | Test F1  |
 |--------------------|---------------|----------------|-------------|----------|
-| Tuned MultinomialNB| 0.656232      | 0.655698       | 0.662776    | 0.656232 |
-| Tuned KNN          | 0.602126      | 0.637935       | 0.639978    | 0.602126 |
-| Tuned RandomForest | 0.663244      | 0.689657       | 0.685504    | 0.663244 |
-| Neural Network     | 0.664619      | 0.661348       | 0.660934    | 0.657428 |
+| Tuned MultinomialNB| 0.6509      | 0.6558       | 0.6486    | 0.6509 |
+| Tuned KNN          | 0.5753      | 0.5828       | 0.5934    | 0.5753 |
+| Tuned RandomForest | 0.5856      | 0.6077       | 0.5743    | 0.5856 |
+| Neural Network     | 0.6572      | 0.6573       | 0.6406    | 0.6417 |
 
-The tuned Random Forests model achieved the highest scores across all the metrics on the test set.
+<img width="3497" height="2966" alt="tuned-models-confusion-matrices" src="https://github.com/user-attachments/assets/43588c4c-9a84-4472-9f25-7aa1953d9f48" />
 
-
-However the **Random Forest model** (19) lags behind the **Multinomial Naves Bayes** (31), and the **Neural Network** (32) in predicting the minority class (Negative Sentiment). This limitation of the Ensemble model is likely due to class imbalance even though the **_scoring_** parameter was set to `f1-weighted` during hyperparameter tuning (to reinforce improvements towards accuracy in making predictions for all classes). 
-
-
+The tuned Random Forests model achieves the highest number of True Positives for the minority class (Negative). Owing to the potential significance of prediciting negative sentiments accurately in supporting informed decision-making, the model is selected for deployment.  
 
 
 ### Objective 5: Deployment
