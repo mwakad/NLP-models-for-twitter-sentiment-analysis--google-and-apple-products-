@@ -92,6 +92,7 @@ The performance of each sentiment model was rigorously evaluated based on: Accur
 | Tuned RandomForest | 0.5856      | 0.6077       | 0.5743    | 0.5856 |
 | Neural Network     | 0.6572      | 0.6573       | 0.6406    | 0.6417 |
 
+**Tuned Models Confusion Matrices on Test Set**
 <img width="3497" height="2966" alt="tuned-models-confusion-matrices" src="https://github.com/user-attachments/assets/43588c4c-9a84-4472-9f25-7aa1953d9f48" />
 
 The tuned Random Forests model achieves the highest number of True Positives for the minority class (Negative). Owing to the potential significance of prediciting negative sentiments accurately in supporting informed decision-making, the model is selected for deployment.  
