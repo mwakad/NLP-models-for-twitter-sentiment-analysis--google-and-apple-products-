@@ -15,7 +15,6 @@ The primary client for this NLP project is Apple. By analyzing sentiments from t
 ### Objective 1: Sentiment Distribuction by Company 
 EDA revealed the distribution of sentiments across Apple and Google products. After cleaning and categorizing products, the sentiment distribution showed that a significant portion of tweets were neutral, followed by positive, and then negative sentiments. This highlights the importance of distinguishing between no emotion and actual positive/negative feedback.
 
-
 ### Objective 2: Logistic Regression Model for Predicting Company 
 A Logistic Regression model was build and tuned to classify tweets as pertaining to either Apple or Google products. The model serves as a preliminary classification step before sentiment prediction by predicting which company's products is an emotion sentiments in a tweet directed at.
 
@@ -37,34 +36,34 @@ Four models were build, and tuned via GridSearchCV(). The classification reports
 
 |             | precision | recall | f1-score | support |
 |-------------|-----------|--------|----------|---------|
-| Negative    | 0.47      | 0.31   | 0.37     | 91      |
-| Neutral     | 0.70      | 0.74   | 0.72     | 742     |
-| Positive    | 0.57      | 0.54   | 0.55     | 469     |
-| Accuracy    |       |     |    0.64  | 1302    |
-| macro avg   | 0.58      | 0.53   | 0.55     | 1302    |
-| weighted avg| 0.63      | 0.64   | 0.64     | 1302    |
+| Negative    | 0.34      | 0.35   | 0.35     | 91      |
+| Neutral     | 0.73      | 0.66   | 0.69     | 742     |
+| Positive    | 0.54      | 0.61   | 0.57     | 469     |
+| Accuracy    |       |     |    0.62  | 1302    |
+| macro avg   | 0.53      | 0.54   | 0.54     | 1302    |
+| weighted avg| 0.63      | 0.62   | 0.62     | 1302    |
 
 **K Nearest Neighbour Model**
 
 |             | precision | recall | f1-score | support |
 |-------------|-----------|--------|----------|---------|
-| Negative    | 0.72      | 0.28   | 0.37     | 91      |
-| Neutral     | 0.65      | 0.87   | 0.75     | 742     |
-| Positive    | 0.65      | 0.38   | 0.48     | 469     |
-| Accuracy    |       |     |    0.65  | 1302    |
-| macro avg   | 0.67      | 0.50   | 0.53     | 1302    |
-| weighted avg| 0.66      | 0.65   | 0.63     | 1302    |
+| Negative    | 0.40      | 0.37   | 0.39     | 91      |
+| Neutral     | 0.65      | 0.80   | 0.72     | 742     |
+| Positive    | 0.61      | 0.39   | 0.47     | 469     |
+| Accuracy    |       |     |    0.62  | 1302    |
+| macro avg   | 0.55      | 0.52   | 0.53     | 1302    |
+| weighted avg| 0.62      | 0.62   | 0.61     | 1302    |
 
 **Random Forests Model**
 
 |             | precision | recall | f1-score | support |
 |-------------|-----------|--------|----------|---------|
-| Negative    | 0.78      | 0.20   | 0.32     | 91      |
-| Neutral     | 0.68      | 0.87   | 0.76     | 742     |
-| Positive    | 0.66      | 0.48   | 0.56     | 469     |
-| Accuracy    |       |     |    0.64  | 1302    |
-| macro avg   | 0.71      | 0.51   | 0.55     | 1302    |
-| weighted avg| 0.68      | 0.68   | 0.66     | 1302    |
+| Negative    | 0.22      | 0.37   | 0.28     | 91      |
+| Neutral     | 0.72      | 0.68   | 0.64     | 742     |
+| Positive    | 0.52      | 0.61   | 0.56     | 469     |
+| Accuracy    |       |     |    0.57  | 1302    |
+| macro avg   | 0.48      | 0.52   | 0.49     | 1302    |
+| weighted avg| 0.61      | 0.57   | 0.59     | 1302    |
 
 **Sequential Neural Network**
 
@@ -93,7 +92,7 @@ The performance of each sentiment model was rigorously evaluated based on: Accur
 The tuned Random Forests model achieved the highest scores across all the metrics on the test set.
 
 
-However the **Random Forest model** (19) lags behind the **Multinomial Naves Bayes** (31), and the **Neural Network** (32) in predicting the minority class (Negative Sentiment). This limitation of the Ensemble model is likely due to class imbalance even though **_SMOTE_** was incorporated in the pipeline and the **_scoring_** parameter during GridSearchCV() was set to `f1-weighted` during hyperparameter tuning (to reinforce improvements towards accuracy in making predictions for all classes). 
+However the **Random Forest model** (19) lags behind the **Multinomial Naves Bayes** (31), and the **Neural Network** (32) in predicting the minority class (Negative Sentiment). This limitation of the Ensemble model is likely due to class imbalance even though the **_scoring_** parameter was set to `f1-weighted` during hyperparameter tuning (to reinforce improvements towards accuracy in making predictions for all classes). 
 
 
 
