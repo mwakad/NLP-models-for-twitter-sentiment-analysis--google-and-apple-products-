@@ -24,7 +24,6 @@ A Logistic Regression model was build and tuned to classify tweets as pertaining
 |-------------|-----------|--------|----------|---------|
 | Apple       | 0.98      | 0.99   | 0.99     | 1085    |
 | Google      | 0.97      | 0.97   | 0.97     | 543     |
-|             |          Accuracy metrics               |
 | Accuracy    |       |     |    0.98  | 1628    |
 | macro avg   | 0.98      | 0.98   | 0.98     | 1628    |
 | weighted avg| 0.98      | 0.98   | 0.98     | 1628    |
@@ -32,6 +31,7 @@ A Logistic Regression model was build and tuned to classify tweets as pertaining
 
 ### Objective 3: Build and Tune Multiple Models for Predicting Sentiment
 Four models were build, and tuned via GridSearchCV(). The classification reports for the tuned versions of the models are captured in the tables below:
+
 **Multinomial Naves Bayes Model**
 
 |             | precision | recall | f1-score | support |
@@ -39,7 +39,6 @@ Four models were build, and tuned via GridSearchCV(). The classification reports
 | Negative    | 0.47      | 0.31   | 0.37     | 91      |
 | Neutral     | 0.70      | 0.74   | 0.72     | 742     |
 | Positive    | 0.57      | 0.54   | 0.55     | 469     |
-|             |          Accuracy metrics               |
 | Accuracy    |       |     |    0.64  | 1302    |
 | macro avg   | 0.58      | 0.53   | 0.55     | 1302    |
 | weighted avg| 0.63      | 0.64   | 0.64     | 1302    |
@@ -51,7 +50,6 @@ Four models were build, and tuned via GridSearchCV(). The classification reports
 | Negative    | 0.72      | 0.28   | 0.37     | 91      |
 | Neutral     | 0.65      | 0.87   | 0.75     | 742     |
 | Positive    | 0.65      | 0.38   | 0.48     | 469     |
-|             |          Accuracy metrics               |
 | Accuracy    |       |     |    0.65  | 1302    |
 | macro avg   | 0.67      | 0.50   | 0.53     | 1302    |
 | weighted avg| 0.66      | 0.65   | 0.63     | 1302    |
@@ -63,7 +61,6 @@ Four models were build, and tuned via GridSearchCV(). The classification reports
 | Negative    | 0.78      | 0.20   | 0.32     | 91      |
 | Neutral     | 0.68      | 0.87   | 0.76     | 742     |
 | Positive    | 0.66      | 0.48   | 0.56     | 469     |
-|             |          Accuracy metrics               |
 | Accuracy    |       |     |    0.64  | 1302    |
 | macro avg   | 0.71      | 0.51   | 0.55     | 1302    |
 | weighted avg| 0.68      | 0.68   | 0.66     | 1302    |
@@ -75,7 +72,6 @@ Four models were build, and tuned via GridSearchCV(). The classification reports
 | Negative    | 0.51      | 0.35   | 0.42     | 91      |
 | Neutral     | 0.70      | 0.75   | 0.72     | 742     |
 | Positive    | 0.58      | 0.56   | 0.57     | 469     |
-|             |          Accuracy metrics               |
 | Accuracy    |       |     |    0.65  | 1302    |
 | macro avg   | 0.60      | 0.55   | 0.57     | 1302    |
 | weighted avg| 0.64      | 0.65   | 0.65     | 1302    |
