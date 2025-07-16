@@ -8,8 +8,8 @@ Built with scikit-learn, Keras, NLTK, and Streamlit, the project includes a comp
 | Task              | Model Used           | Deployment File          |
 |-------------------|----------------------|--------------------------|
 | Product Classification | Logistic Regression | logistic_model.joblib    |
-| Sentiment         | Random Forest (Best), Neural Network | randomforest_model.joblib, neuralnetwork_keras |
-| Interface         | Streamlit            | streamlit_app.py, streamlit_app_nn.py |
+| Sentiment         | Random Forest | randomforest_model.joblib |
+| Interface         | Streamlit            | streamlit_app.py |
 
 ## Data Understanding
 The dataset used is tweet_product_company.csv, which contains real-world tweet data mentioning Apple and Google products. Each entry includes the tweet text, the referenced product (e.g., iPhone, Google), the associated company (Apple or Google), and a sentiment label (positive, negative, or neutral). The dataset is valuable due to the short, noisy, and opinion-driven nature of tweets, making it ideal for testing robust NLP techniques. It supports both binary and multiclass sentiment prediction and offers real-world variability, including emoji usage, slang, and abbreviations.
