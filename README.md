@@ -1,6 +1,6 @@
 # Twitter Sentiment Analysis for Google and Apple Products
 ## Project Summary
-This project focuses on performing sentiment analysis on tweets related to Apple and Google products. Leveraging a dataset of over 9,000 human-rated tweets, the goal is to classify sentiments as positive, negative, or neutral to understand public perception and identify trends. The project aims to build and evaluate multiple models for predicting sentiment (**_Multinomial Naive Bayes, K-Nearest Neighbor, Random Forest Classifier, and Neural Networks_**, and a **_Logistic Regression Model_** for predicting the product an emotion is directed at. The best-performing **_sentiment prediction model_** and the **_Logistic Regression_** model are integrated into a Streamlit deployment application for real-time insights.
+This project focuses on performing sentiment analysis on tweets related to Apple and Google products. Leveraging a dataset of over 9,000 human-rated tweets, the goal is to classify sentiments as positive, negative, or neutral to understand public perception and identify trends. The project aims to build and evaluate multiple models for predicting sentiment (**_Multinomial Naive Bayes, K-Nearest Neighbor, Random Forest Classifier, and Neural Networks_**, and a **_Logistic Regression Model_** for classifying the product an emotion is directed at. The best-performing **_sentiment prediction model_** and the **_Logistic Regression_** model are integrated into a Streamlit deployment application for real-time insights.
 
 ## Data Understanding
 The dataset used is tweet_product_company.csv, which contains real-world tweet data mentioning Apple and Google products. Each entry includes the tweet text, the referenced product (e.g., iPhone, Google), the associated company (Apple or Google), and a sentiment label (positive, negative, or neutral). The dataset is valuable due to the short, noisy, and opinion-driven nature of tweets, making it ideal for testing robust NLP techniques. It supports both binary and multiclass sentiment prediction and offers real-world variability, including emoji usage, slang, and abbreviations.
@@ -112,12 +112,10 @@ This project successfully demonstrates the application of NLP techniques for sen
 **Temporal Analysis:** Incorporate time-series analysis to track sentiment trends over time, especially around product launches or major company announcements, to identify immediate public reactions.
 
 ## Next Steps
-1. Deploy the FastAPI backend to a Cloud Service.
+1. Deploy the streamlit deployment app to a Cloud Service.
 
 2. Incorporate real-time Tweet streaming via the X API to stream tweets filtered by keywords.
 
 3. Build a Tableau Dashboard to visualize sentiment and product trends in real-time to support data-informed decisions.
 
-4. Experiment with Transfer Learning by leveraging pretrained transformers for NLP, such as BERT.
-
-5. Retrain the deployed models with the latest tweet data to promote progressive accuracy improvement and advancements.
+4. Retrain the deployed models with the latest tweet data to promote progressive accuracy improvement and advancements.
