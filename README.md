@@ -1,6 +1,15 @@
 # Twitter Sentiment Analysis for Google and Apple Products
 ## Project Summary
-This project focuses on performing sentiment analysis on tweets related to Apple and Google products. Leveraging a dataset of over 9,000 human-rated tweets, the goal is to classify sentiments as positive, negative, or neutral to understand public perception and identify trends. The project aims to build and evaluate multiple models for predicting sentiment (**_Multinomial Naive Bayes, K-Nearest Neighbor, Random Forest Classifier, and Neural Networks_**, and a **_Logistic Regression Model_** for classifying the product an emotion is directed at. The best-performing **_sentiment prediction model_** and the **_Logistic Regression_** model are integrated into a Streamlit deployment application for real-time insights.
+This project applies Natural Language Processing (NLP) techniques to classify tweets related to Apple and Google. It accomplishes two key tasks:
+- Product Classification: Predict whether a tweet refers to an Apple or Google product.
+- Sentiment Classification: Predict whether a tweet expresses a Negative, Neutral, or Positive sentiment.
+Built with scikit-learn, Keras, NLTK, and Streamlit, the project includes a complete machine learning pipeline from data preprocessing to model deployment.
+
+| Task              | Model Used           | Deployment File          |
+|-------------------|----------------------|--------------------------|
+| Product Classification | Logistic Regression | logistic_model.joblib    |
+| Sentiment         | Random Forest (Best), Neural Network | randomforest_model.joblib, neuralnetwork_keras |
+| Interface         | Streamlit            | streamlit_app.py, streamlit_app_nn.py |
 
 ## Data Understanding
 The dataset used is tweet_product_company.csv, which contains real-world tweet data mentioning Apple and Google products. Each entry includes the tweet text, the referenced product (e.g., iPhone, Google), the associated company (Apple or Google), and a sentiment label (positive, negative, or neutral). The dataset is valuable due to the short, noisy, and opinion-driven nature of tweets, making it ideal for testing robust NLP techniques. It supports both binary and multiclass sentiment prediction and offers real-world variability, including emoji usage, slang, and abbreviations.
@@ -101,8 +110,22 @@ The tuned Random Forests model achieves the highest number of True Positives for
 ### Objective 5: Deployment
 A user-friendly Streamlit application was developed to demonstrate the utility of the selected model. This app will allow users to input tweets and receive predictions on both the associated product (Apple or Google) and the sentiment (positive, negative, or neutral), providing a practical tool for real-time sentiment analysis.
 
+## Model Interpretability
+    • LIME was used to explain Random Forest predictions at the feature level.
+    • Example explanations were exported as .html files for transparency.
+    
 ## Conclusion
 This project successfully demonstrates the application of NLP techniques for sentiment analysis on social media data. By meticulously cleaning and preprocessing the tweet dataset, and then training and evaluating various classification models, we can effectively gauge public opinion towards Apple and Google products. The chosen models provide valuable insights into consumer sentiment, which can be leveraged for strategic business decisions.
+
+## Installation & Running the App
+    1. Clone the repo
+git clone https://github.com/yourusername/apple-google-tweet-classifier.git
+cd apple-google-tweet-classifier
+    2. Install dependencies
+pip install -r requirements.txt
+    3. Run Streamlit App
+streamlit run streamlit_app.py      # For RF sentiment prediction
+streamlit run streamlit_app_nn.py   # For NN sentiment prediction
 
 ## Recommendations
 **Larger Training Dataset:** Incorporate a larger and more diverse dataset to reduce potential overfitting, optimize real-world robustness, and enhance generalizability with noisy social media text data.
@@ -119,3 +142,4 @@ This project successfully demonstrates the application of NLP techniques for sen
 3. Build a Tableau Dashboard to visualize sentiment and product trends in real-time to support data-informed decisions.
 
 4. Retrain the deployed models with the latest tweet data to promote progressive accuracy improvement and advancements.
+
