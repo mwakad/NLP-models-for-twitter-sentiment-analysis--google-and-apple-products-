@@ -93,13 +93,12 @@ The performance of each sentiment model was rigorously evaluated based on: Accur
 
 **Tuned Models' Performance on Test Set**
 
-
-| Model              | Test Accuracy | Test Precision | Test Recall | Test F1  |
-|--------------------|---------------|----------------|-------------|----------|
-| Tuned MultinomialNB| 0.6509      | 0.6558       | 0.6486    | 0.6509 |
-| Tuned KNN          | 0.5753      | 0.5828       | 0.5934    | 0.5753 |
-| Tuned RandomForest | 0.5856      | 0.6077       | 0.5743    | 0.5856 |
-| Neural Network     | 0.6572      | 0.6573       | 0.6406    | 0.6417 |
+|    Model            | Test Accuracy | Test Precision | Test Recall | Test F1 |
+|---------------------|---------------|----------------|-------------|---------|
+|  Tuned MultinomialNB | 0.6509      | 0.6575       | 0.6466    | 0.6509 |
+|  Tuned KNN         | 0.5869     | 0.6133       | 0.6191     | 0.5869 |
+|  Tuned RandomForest | 0.6590     | 0.6669      | 0.6726     | 0.6590 |
+|  Neural Network    | 0.6535     | 0.6463     | 0.6492    | 0.6434 |
 
 **Tuned Models Confusion Matrices on Test Set**
 <img width="3497" height="2966" alt="tuned-models-confusion-matrices" src="https://github.com/user-attachments/assets/43588c4c-9a84-4472-9f25-7aa1953d9f48" />
